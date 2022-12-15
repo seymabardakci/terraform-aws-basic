@@ -39,6 +39,7 @@ variable "private_prefix" {
 }
 
 variable "security_group_id" {  
+   default = ""
 }
 
 variable "instance_type" {
@@ -47,4 +48,7 @@ variable "instance_type" {
    default = ""
 }
 
-variable "subnet_id" {}
+variable "subnet_id" {
+   type = string
+   default = ""
+}
