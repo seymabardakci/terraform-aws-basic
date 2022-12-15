@@ -5,7 +5,7 @@ variable "region" {
 
 variable "vpc_cidr" {
   description = "The IPv4 CIDR block for the VPC"
-  default = "0.0.0.0/0"
+  default = "10.0.0.0/16"
   type = string
 }
 
