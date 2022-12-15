@@ -38,11 +38,13 @@ variable "private_prefix" {
    default = {}
 }
 
-variable "security_group_id" {}
+variable "security_group_id" {  
+}
 
 variable "instance_type" {
    description = "Instance type to use for the instance."
    type = string
+   default = ""
 }
 
 variable "subnet_id" {}
