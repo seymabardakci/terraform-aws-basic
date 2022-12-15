@@ -1,6 +1,6 @@
 
 module "create_vpc" {
-  source         = "../../modules/vpc"
+  source         = "modules/vpc"
   region         = var.region
   env_tags       = var.env_tags
   env_name       = var.env_name
@@ -10,7 +10,7 @@ module "create_vpc" {
 }
 
 module "create_security_group" {
-  source         = "../../modules/security"
+  source         = "modules/security"
   region         = var.region
   vpc_id         = module.create_vpc.vpc_id
   env_tags       = var.env_tags
@@ -18,7 +18,7 @@ module "create_security_group" {
 }
 
 module "create_ec2_public" {
-  source   = "../../modules/ec2"
+  source   = "modules/ec2"
 
   region         = var.region
   env_tags       = var.env_tags
@@ -31,7 +31,7 @@ module "create_ec2_public" {
 }
 
 module "create_ec2_private" {
-  source   = "../../modules/ec2"
+  source   = "modules/ec2"
 
   region         = var.region
   env_tags       = var.env_tags
